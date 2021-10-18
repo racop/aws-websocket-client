@@ -1,0 +1,1 @@
+module.exports = require('./lib/aws-ws-client.js');
