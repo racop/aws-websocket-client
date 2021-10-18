@@ -9,13 +9,13 @@
 
 ### Download
 ```
-npm install aws-websocket-client -S
+npm install aws-websocket-client
 ```
 
 ### Requirements
 ```
 NodeJS serverless needs to have aws-websocket-server installed.
-npm i aws-websocket-server -S
+npm i aws-websocket-server
 ```
 
 ### How to Use
@@ -37,14 +37,16 @@ socket.connect()
 
 ### Subscribe channel
 ```
-let channelName = 'group 1';
-socket.subscribe()
+// Channel name can be single string or array of channels eg: ["room 1", "room 2"]
+let channelName = 'room 1';
+socket.subscribe(channelName)
 ```
 
 ### Unsubscribe channel
 ```
-let channelName = 'group 1';
-socket.unsubscribe()
+// Channel name can be single string or array of channels eg: ["room 1", "room 2"]
+let channelName = 'room 1';
+socket.unsubscribe(channelName)
 ```
 
 ### Send Message to an event
