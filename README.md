@@ -5,8 +5,9 @@
 - Add Socket.io like wrapper to AWS WebSocket client
 - Very lightweight plugin with no dependencies :-)
 - Easy to use
+```
 
-Download
+### Download
 ```
 npm install aws-websocket-client -S
 ```

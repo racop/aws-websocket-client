@@ -1,6 +1,6 @@
 {
   "name": "aws-websocket-client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "WebScoket wrapper for AWS WebSocket API to provide socket.io like interface to handlers.",
   "main": "index.js",
   "repository": {
