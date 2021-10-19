@@ -25,28 +25,28 @@ const URL = 'wss://{apiId}.execute-api.{region}.amazonaws.com/{stage}' // AWS we
 const socket = new io(URL,{
     debug: true,
     messageChannel: 'sendMessage',
-    restartMax: 3, // Maximum retries to connect to websocket server, if fails then clear websocket [0 means infinite]
-    reconnectTime: 2 * 1000, // Tries to reconnect every 3 seconds on server disconnect
+    restartMax: 3, // Optional, max retries to reconnect to ws server, default 0, means continous retry at given reconnectTime
+    reconnectTime: 3 * 1000, // Optional, Tries to reconnect every 3 seconds on server disconnect
 });
 ```
 
 ### Connect to Websocket
 ```
-socket.connect()
+socket.connect();
 ```
 
 ### Subscribe channel
 ```
 // Channel name can be single string or array of channels eg: ["room 1", "room 2"]
 let channelName = 'room 1';
-socket.subscribe(channelName)
+socket.subscribe(channelName);
 ```
 
 ### Unsubscribe channel
 ```
 // Channel name can be single string or array of channels eg: ["room 1", "room 2"]
 let channelName = 'room 1';
-socket.unsubscribe(channelName)
+socket.unsubscribe(channelName);
 ```
 
 ### Send Message to an event
