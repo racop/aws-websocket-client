@@ -14,8 +14,10 @@ npm install aws-websocket-client
 
 ### Requirements
 ```
-NodeJS serverless needs to have aws-websocket-server installed.
-npm i aws-websocket-server
+- NodeJS serverless needs to have aws-websocket-server installed.
+- npm i aws-websocket-server
+
+Github:- https://github.com/racop/aws-websocket-server
 ```
 
 ### How to Use
@@ -24,7 +26,7 @@ import io from 'aws-websocket-client'
 const URL = 'wss://{apiId}.execute-api.{region}.amazonaws.com/{stage}' // AWS websocket endpoint
 const socket = new io(URL,{
     debug: true,
-    messageChannel: 'sendMessage',
+    messageChannel: 'sendMessage', // Websocket server message handler
     restartMax: 3, // Optional, max retries to reconnect to ws server, default 0, means continous retry at given reconnectTime
     reconnectTime: 3 * 1000, // Optional, Tries to reconnect every 3 seconds on server disconnect
 });
